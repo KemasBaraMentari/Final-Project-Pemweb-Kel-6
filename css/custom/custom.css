@@ -1,0 +1,25 @@
+:root{
+    --okelah: #FFC994;
+}
+.background{
+    background-image: url('../../assets/images/dudel_masak_oren_2.png');
+    background-size: 100%;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+}
+
+input[type=search].search {
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+    /* border-radius: 4px;
+    font-size: 16px; */
+    background-color: white;
+    background-image: url('https://img.icons8.com/ios/20/search--v1.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    /* padding: 12px 20px 12px 40px; */
+    background-color: var(--okelah);
+    padding-left: 40px;
+  }
