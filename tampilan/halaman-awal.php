@@ -35,7 +35,6 @@
         <div class="col-md-6 p-5">
           <div class="card text-white" style="background-image: url('../assets/images/rectangle_105.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
-              <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Western</h3>
                 <div class="d-flex justify-content-center">
@@ -49,7 +48,6 @@
         <div class="col-md-6 p-5">
           <div class="card text-white" style="background-image: url('../assets/images/rectangle_107.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
-              <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Indonesia</h3>
                 <div class="d-flex justify-content-center">
@@ -63,7 +61,6 @@
         <div class="col-md-6 p-5">
           <div class="card text-white" style="background-image: url('../assets/images/rectangle_109.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
-              <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Arab</h3>
                 <div class="d-flex justify-content-center">
@@ -77,7 +74,6 @@
         <div class="col-md-6 p-5">
           <div class="card text-white" style="background-image: url('../assets/images/rectangle_106.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
-              <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Korea</h3>
                 <div class="d-flex justify-content-center">
@@ -100,9 +96,11 @@
         <span data-bs-dismiss="offcanvas" aria-label="Close" class="cursor-pointer"><img src="../assets/vectors/textalign-left2.svg" alt="" width="40px"></span>
       </div>
       <div class="offcanvas-body">
-        <div>
+        <div class="d-flex justify-content-center">
           <img src="../Logo-AromaDapur.png" alt="" width="70px">
+          <div class="d-flex justify-content-center">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel">AromaDapur</h5>
+          </div>
         </div>
         <div class="dropdown mt-3">
           <!-- List pilihan -->
@@ -116,9 +114,10 @@
         </div>
       </div>
     <div>
+    
     <!-- Background image kecil bawah -->
-
-    </div>
+    </div class="align-items-end">
+    <img src="../assets/images/dudel_masak_oren_2.png" alt="">
     <div>
     <!-- end off canvas sidebar -->
     </div>
