@@ -37,7 +37,7 @@
             <div class="card-body row align-items-end">
               <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
-                <h3 class="text-center">Judull</h3>
+                <h3 class="text-center">Makanan Western</h3>
                 <div class="d-flex justify-content-center">
                   <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
@@ -47,11 +47,11 @@
         </div>
 
         <div class="col-md-6 p-5">
-          <div class="card text-white" style="background-image: url('../assets/images/rectangle_105.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
+          <div class="card text-white" style="background-image: url('../assets/images/rectangle_107.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
               <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
-                <h3 class="text-center">Judull</h3>
+                <h3 class="text-center">Makanan Indonesia</h3>
                 <div class="d-flex justify-content-center">
                   <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
@@ -61,11 +61,11 @@
         </div>
 
         <div class="col-md-6 p-5">
-          <div class="card text-white" style="background-image: url('../assets/images/rectangle_105.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
+          <div class="card text-white" style="background-image: url('../assets/images/rectangle_109.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
               <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
-                <h3 class="text-center">Judull</h3>
+                <h3 class="text-center">Makanan Arab</h3>
                 <div class="d-flex justify-content-center">
                   <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
@@ -75,11 +75,11 @@
         </div>
 
         <div class="col-md-6 p-5">
-          <div class="card text-white" style="background-image: url('../assets/images/rectangle_105.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
+          <div class="card text-white" style="background-image: url('../assets/images/rectangle_106.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
             <div class="card-body row align-items-end">
               <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="100%"> -->
               <div class="row justify-content-center col-12">
-                <h3 class="text-center">Judull</h3>
+                <h3 class="text-center">Makanan Korea</h3>
                 <div class="d-flex justify-content-center">
                   <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
@@ -98,29 +98,30 @@
     <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color: #531607">
       <div class="offcanvas-header">
         <span data-bs-dismiss="offcanvas" aria-label="Close" class="cursor-pointer"><img src="../assets/vectors/textalign-left2.svg" alt="" width="40px"></span>
-        <img src="../Logo-AromaDapur.png" alt="" width="70px">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">AromaDapur</h5>
       </div>
       <div class="offcanvas-body">
         <div>
-          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          <img src="../Logo-AromaDapur.png" alt="" width="70px">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">AromaDapur</h5>
         </div>
         <div class="dropdown mt-3">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <!-- List pilihan -->
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="50px">Resepku</a>
+          <br><br>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="50px">Resep yang Disukai</a>
+          <br><br>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="50px">Resep Trending</a>
+          <br><br>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="50px">Pengaturan</a>
         </div>
       </div>
+    <div>
+    <!-- Background image kecil bawah -->
+
     </div>
+    <div>
     <!-- end off canvas sidebar -->
-
-
-  </div>
+    </div>
 
 
   <!-- Optional JavaScript; choose one of the two! -->
