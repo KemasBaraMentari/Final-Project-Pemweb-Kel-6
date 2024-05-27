@@ -16,9 +16,9 @@
         <br><br>
         <h1>Aroma Dapur</h1>
         <p>Temukan Resep Favoritmu</p>
-        <button class="Masuk"><a href="halaman-masuk.html">Masuk</a></button>
+        <button><a href="halaman-masuk.php" class="text-decoration-none text-dark">Masuk</a></button>
         <br><br>
-        <button class="Daftar"><a href="halaman-daftar.html">Daftar</a></button>
+        <button><a href="halaman-daftar.php" class="text-decoration-none text-dark">Daftar</a></button>
         <br><br>
     </div>
 

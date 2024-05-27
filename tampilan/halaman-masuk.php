@@ -24,7 +24,7 @@
         <input type="password" class="isian">
         <br><br>
         <div class="button">
-        <button>Masuk</button>
+        <button class="text-decoration-none text-dark">Masuk</button>
         </div>
       </div>
     <!-- Optional JavaScript; choose one of the two! -->

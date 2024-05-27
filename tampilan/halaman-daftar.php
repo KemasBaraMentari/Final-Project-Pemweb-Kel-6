@@ -32,7 +32,7 @@
         <input type="password" class="isian">
         <br><br>
         <div class="button">
-        <button>Daftar</button>
+        <button class="text-decoration-none text-dark">Daftar</button>
         </div>
       </div>
     <!-- Optional JavaScript; choose one of the two! -->
