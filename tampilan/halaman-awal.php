@@ -98,29 +98,29 @@
       <div class="offcanvas-body">
         <div class="d-flex justify-content-center">
           <img src="../Logo-AromaDapur.png" alt="" width="70px">
-          <div class="d-flex justify-content-center">
+        </div>
+        <div class="d-flex justify-content-center">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel">AromaDapur</h5>
-          </div>
         </div>
         <div class="dropdown mt-3">
           <!-- List pilihan -->
-          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="50px">Resepku</a>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="40px">Resepku</a>
           <br><br>
-          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="50px">Resep yang Disukai</a>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="40px">Resep yang Disukai</a>
           <br><br>
-          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="50px">Resep Trending</a>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="40px">Resep Trending</a>
           <br><br>
-          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="50px">Pengaturan</a>
+          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan</a>
         </div>
       </div>
     <div>
     
     <!-- Background image kecil bawah -->
-    </div class="align-items-end">
-    <img src="../assets/images/dudel_masak_oren_2.png" alt="">
-    <div>
-    <!-- end off canvas sidebar -->
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+    <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" alt="">
     </div>
+    </div>  
+    <!-- end off canvas sidebar -->
 
 
   <!-- Optional JavaScript; choose one of the two! -->
