@@ -1,5 +1,5 @@
 # Final-Project-Pemweb-Kel-6
-github untuk final project mata kuliah pemrograman web kelompok 6 
+github untuk final project mata kuliah pemrograman web kelompok 6  
 Website resep makanan dengan nama "Aroma resep"  
 Anggota:  
 1. Kemas Alfin Yazi Bara Mentari (22081010143)  
