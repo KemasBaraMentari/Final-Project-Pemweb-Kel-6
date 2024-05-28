@@ -37,7 +37,6 @@
             <div class="form-group" id="subkategoriMakanan">
               <label for="subKategoriMakanan">Subkategori Makanan</label>
               <select class="form-control" id="subKategoriMakanan">
-                <!-- Options will be added dynamically based on the selected category -->
               </select>
             </div>
             <div class="form-group">
