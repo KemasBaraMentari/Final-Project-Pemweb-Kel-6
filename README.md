@@ -6,4 +6,4 @@ Anggota:
 2. Fatan Izzatur Rahman (22081010145)  
 3. Galang Rizqian Falah (22081010148)  
 4. Bryan Anantha Manggala (22081010164)  
-5. Naufaldy Akbar Endhardin (22081010167)    
+5. Naufaldy Akbar Endhardin (22081010167)   
