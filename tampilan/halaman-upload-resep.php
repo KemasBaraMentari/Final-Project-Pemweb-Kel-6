@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: #f5f5dc;">
   <div class="container-fluid h-100">
-    <a href="resepku.php" class="btn btn-secondary mb-3">Back</a>
+    <a href="halaman-resepku.php" class="btn btn-secondary mb-3">Back</a>
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-lg-6">
         <div class="card p-4" style="background-color: #fff8dc;">

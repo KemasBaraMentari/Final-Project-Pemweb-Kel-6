@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="daftar-resep.css"> <!-- Updated CSS file reference -->
+  <link rel="stylesheet" href="resepku.css">
 
-  <title>Daftar resep</title>
+  <title>Resepku</title>
 </head>
 
 <body>
@@ -22,33 +21,28 @@
             <img src="back-icon.png" alt="Back" class="back-icon">
           </a>
         </div>
-        <h1 class="m-0">Daftar Resep</h1>
-      </div>
-      <div class="search-box mb-4">
-        <input type="search" class="form-control rounded-pill" placeholder="Search..">
+        <h1 class="m-0">Resepku</h1>
       </div>
       <div class="recipe-list">
         <div class="recipe-item d-flex align-items-center mb-4">
-          <img src="seblak.jpg" alt="Seblak" class="recipe-image">
+          <img src="nasi-goreng.jpg" alt="Nasi Goreng" class="recipe-image">
           <div class="recipe-info ml-3">
-            <h2 class="m-0">Seblak</h2>
+            <h2 class="m-0">Nasi Goreng</h2>
             <a href="#" class="text-dark">Lihat</a>
           </div>
         </div>
         <div class="recipe-item d-flex align-items-center mb-4">
-          <img src="rendang.jpg" alt="Rendang" class="recipe-image">
+          <img src="sop-ayam.jpg" alt="Sop Ayam" class="recipe-image">
           <div class="recipe-info ml-3">
-            <h2 class="m-0">Rendang</h2>
+            <h2 class="m-0">Sop Ayam</h2>
             <a href="#" class="text-dark">Lihat</a>
           </div>
         </div>
-        <div class="recipe-item d-flex align-items-center mb-4">
-          <img src="soto.jpg" alt="Soto Ayam" class="recipe-image">
-          <div class="recipe-info ml-3">
-            <h2 class="m-0">Soto Ayam</h2>
-            <a href="#" class="text-dark">Lihat</a>
-          </div>
-        </div>
+      </div>
+      <div class="floating-button">
+        <a href="halaman-upload-resep.php" class="btn btn-dark rounded-circle">
+          <img src="plus-icon.png" alt="Plus" class="plus-icon">
+        </a>
       </div>
     </div>
   </div>
