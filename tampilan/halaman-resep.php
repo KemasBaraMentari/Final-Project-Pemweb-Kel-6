@@ -8,14 +8,14 @@
 
   <!-- Bootstrap CSS -->
   <link href="../css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/custom/custom.css">
+  <link rel="stylesheet" href="../css/custom/resep.css">
 
   <title>Detail Resep - Aroma Dapur</title>
 </head>
 
 <body>
   <div class="container py-5">
-    <div class="row">
+    <div class="row border-rounded">
       <div class="col-md-6">
         <img src="../assets/images/gambar_makanan.jpg" alt="Gambar Makanan" class="img-fluid rounded">
       </div>
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-md-6">
+      <div class="col-md-6 border-rounded">
         <h3>Bahan-bahan</h3>
         <ul>
           <li>1 cup tepung terigu</li>
@@ -36,7 +36,7 @@
           <!-- Tambahkan bahan-bahan lain sesuai resep -->
         </ul>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 border-rounded">
         <h3>Langkah Pembuatan</h3>
         <ol>
           <li>Campur tepung dan garam dalam wadah besar.</li>
@@ -50,7 +50,6 @@
     </div>
   </div>
 
-  <!-- Optional JavaScript; choose one of the two! -->
   <script src="../js/bootstrap.js"></script>
   <script src="../js/popper.min.js"></script>
 </body>
