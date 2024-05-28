@@ -15,13 +15,16 @@
 <body>
   <div class="container mt-5">
     <div class="card p-4">
-      <div class="d-flex align-items-center mb-4">
-        <div class="back-button mr-3">
-          <a href="#" class="text-dark">
-            <img src="back-icon.png" alt="Back" class="back-icon">
-          </a>
+      <div class="d-flex align-items-center mb-4 justify-content-between">
+        <div class="d-flex align-items-center">
+          <div class="back-button mr-3">
+            <a href="#" class="text-dark">
+              <img src="back-icon.png" alt="Back" class="back-icon">
+            </a>
+          </div>
+          <h1 class="m-0">Resepku</h1>
         </div>
-        <h1 class="m-0">Resepku</h1>
+        <a href="halaman-upload-resep.php" class="btn btn-dark">Upload Resep</a>
       </div>
       <div class="recipe-list">
         <div class="recipe-item d-flex align-items-center mb-4">
