@@ -104,7 +104,7 @@
         </div>
         <div class="dropdown mt-3">
           <!-- List pilihan -->
-          <a href="#" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="40px">Resepku</a>
+          <a href="halaman-resepku.php" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="40px">Resepku</a>
           <br><br>
           <a href="#" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="40px">Resep yang Disukai</a>
           <br><br>
