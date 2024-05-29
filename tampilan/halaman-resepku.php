@@ -7,7 +7,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="resepku.css">
+  <link rel="stylesheet" href="../css/custom/resepku.css">
 
   <title>Resepku</title>
 </head>
