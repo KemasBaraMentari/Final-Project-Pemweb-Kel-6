@@ -51,7 +51,7 @@
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Indonesia</h3>
                 <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
+                  <a href="masakan-indonesia.php" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
               </div>
             </div>
@@ -84,10 +84,9 @@
           </div>
         </div>
 
-        
+
       </div>
     </div>
-    <!-- <img src="../assets/images/rectangle_105.jpeg" alt="" width="300px" height="200px"> -->
 
 
     <!-- off canvas sidebar -->
@@ -113,24 +112,24 @@
           <a href="#" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan</a>
         </div>
       </div>
-    <div>
-    
-    <!-- Background image kecil bawah -->
-    <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
-    <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" alt="">
-    </div>
-    </div>  
-    <!-- end off canvas sidebar -->
+      <div>
+
+        <!-- Background image kecil bawah -->
+        <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+          <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" style="background-size: cover; background-position: center; width: 100%;" alt="">
+          </div>
+        </div>
+        <!-- end off canvas sidebar -->
 
 
-  <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="../js/bootstrap.js"></script>
-  <script src="../js/popper.min.js"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/popper.min.js"></script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->

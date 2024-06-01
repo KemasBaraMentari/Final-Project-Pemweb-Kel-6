@@ -1,32 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Masuk | Aroma Dapur</title>
-  </head>
-  <body>
-    <div class="satu">
-        <img src="../Logo-AromaDapur.png" alt="" width="150px">
-        <br><br>
-        <h1>Masukkan Akun</h1>
-        <label for="Email">Email</label>
-        <br>
-        <input type="email" class="isian">
-        <br>
-        <label for="Password">Kata Sandi</label>
-        <br>
-        <input type="password" class="isian">
-        <br><br>
-        <div class="button">
-        <button class="text-decoration-none text-dark">Masuk</button>
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <title>Masuk | Aroma Dapur</title>
+
+  <style>
+    .btn-go {
+      background-color: #330000;
+    }
+
+    .text-go {
+      color: #330000;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="position-relative" style="background-color: #FFF9D0;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh; ">
+        <div class="col-md-6 ">
+          <div class="card p-4" style="background-color: #FFC994; border-radius: 100px; height: 80vh;">
+            <div class="card-body ">
+              <div class="mb-5">
+                <h1 class="text-go text-center">Masukkan Akun</h1>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control rounded-pill" id="email" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan kata sandi">
+              </div>
+              <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
+                <a href="oke.php" class=" d-block text-go text-decoration">Lupa Password?</a>
+              </div>
+              <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
+                <a href="halaman-awal.php" class="btn btn-go d-block w-50 text-white rounded-pill">Masuk</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="position-absolute top-0 left-0">
+      <a href="halaman-pilihan.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -38,5 +68,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  </body>
+</body>
+
 </html>

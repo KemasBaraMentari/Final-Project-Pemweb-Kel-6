@@ -2,24 +2,22 @@
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Resepku</title>
+  <title>Daftar resep</title>
 </head>
 
 <body>
-    <div class="position-absolute top-0 left-0">
-      <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
-    </div>
-    <div class="position-fixed bottom-0 right-0 z-100" style="bottom: 0; right:100px; z-index: 10;">
-      <a href="halaman-upload-resep.php"><img src="../assets/vectors/upload-resepku.svg" alt="tombol back"></a>
-    </div>
-    
+  <div class="position-absolute top-0 left-0">
+    <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+  </div>
+
 
   <div class="background">
     <div class="container">
@@ -35,8 +33,11 @@
                   <div class="col-10">
                     <h1 class="">Resepku</h1>
                   </div>
-
-
+                </div>
+              </div>
+              <div class="d-flex justify-content-center my-5">
+                <div class="col-md-4">
+                  <input type="search" name="search" placeholder="Search.." class="search form-control rounded-pill border-0 bg-white" autocomplete="off">
                 </div>
               </div>
               <div class="container py-5">
@@ -78,8 +79,6 @@
           </div>
         </div>
       </div>
-
-
 
       <!-- Optional JavaScript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

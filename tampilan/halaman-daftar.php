@@ -9,32 +9,58 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
 
     <title>Daftar | Aroma Dapur</title>
+
+    <style>
+    .btn-go {
+      background-color: #330000;
+    }
+
+    .text-go {
+      color: #330000;
+    }
+  </style>
+
   </head>
+  
   <body>
-    <div class="satu">
-        <img src="../Logo-AromaDapur.png" alt="" width="150px">
-        <br><br>
-        <h1>Daftar Akun</h1>
-        <label for="Nama">Nama</label>
-        <br>
-        <input type="text" class="isian">
-        <br>
-        <label for="Email">Email</label>
-        <br>
-        <input type="email" class="isian">
-        <br>
-        <label for="Password">Kata Sandi</label>
-        <br>
-        <input type="password" class="isian">
-        <br>
-        <label for="Password">Ulangi Kata Sandi</label>
-        <br>
-        <input type="password" class="isian">
-        <br><br>
-        <div class="button">
-        <button class="text-decoration-none text-dark">Daftar</button>
+  <div class="position-relative" style="background-color: #FFF9D0;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh; ">
+        <div class="col-md-6 ">
+          <div class="card p-4" style="background-color: #FFC994; border-radius: 100px; height: 80vh;">
+            <div class="card-body ">
+              <div class="mb-5">
+                <h1 class="text-go text-center">Daftar Akun</h1>
+              </div>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" name="nama" class="form-control rounded-pill" id="nama" placeholder="nama lengkap">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control rounded-pill" id="email" placeholder="masukkan email">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan kata sandi">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Ulangi Kata Sandi</label>
+                <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan ulang kata sandi">
+              </div>
+              <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
+                <a href="halaman-masuk.php" class="btn btn-go d-block w-50 text-white rounded-pill">Daftar</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="position-absolute top-0 left-0">
+      <a href="halaman-pilihan.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

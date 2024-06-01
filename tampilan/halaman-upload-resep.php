@@ -1,99 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Upload Resep</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body style="background-color: #f5f5dc;">
-  <div class="container-fluid h-100">
-    <a href="halaman-resepku.php" class="btn btn-secondary mb-3">Back</a>
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-lg-6">
-        <div class="card p-4" style="background-color: #fff8dc;">
-          <h1 class="mb-4">Upload Resep</h1>
-          <form>
-            <div class="form-group">
-              <label for="uploadFoto">Upload Foto Makanan</label>
-              <input type="file" class="form-control-file" id="uploadFoto" accept="image/*" onchange="previewImage()">
-            </div>
-            <div class="form-group">
-              <label for="previewFoto"></label>
-              <img src="#" alt="Preview Foto Makanan" id="previewFoto" class="img-thumbnail" style="width: 200px; height: 200px;">
-            </div>
-            <div class="form-group">
-              <label for="namaMakanan">Nama Makanan</label>
-              <input type="text" class="form-control" id="namaMakanan">
-            </div>
-            <div class="form-group">
-              <label for="kategoriMakanan">Kategori Makanan</label>
-              <select class="form-control" id="kategoriMakanan">
-                <option value="indonesia">Makanan Indonesia</option>
-                <option value="western">Makanan Western</option>
-              </select>
-            </div>
-            <div class="form-group" id="subkategoriMakanan">
-              <label for="subKategoriMakanan">Subkategori Makanan</label>
-              <select class="form-control" id="subKategoriMakanan">
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="deskripsiMakanan">Deskripsi Makanan</label>
-              <textarea class="form-control" id="deskripsiMakanan" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="bahanMakanan">Bahan-bahan</label>
-              <textarea class="form-control" id="bahanMakanan" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="langkahPembuatan">Langkah Pembuatan</label>
-              <textarea class="form-control" id="langkahPembuatan" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Upload</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    function previewImage() {
-      var preview = document.getElementById('previewFoto');
-      var file = document.getElementById('uploadFoto').files[0];
-      var reader = new FileReader();
-
-      reader.onloadend = function() {
-        preview.src = reader.result;
-      }
-
-      if (file) {
-        reader.readAsDataURL(file);
-      } else {
-        preview.src = "";
-      }
+  <style>
+    .btn-go {
+      background-color: #330000 !important;
     }
 
-    document.getElementById('kategoriMakanan').addEventListener('change', function() {
-      var kategori = this.value;
-      var subkategoriDropdown = document.getElementById('subKategoriMakanan');
-      subkategoriDropdown.innerHTML = '';
-      
-      if (kategori === 'indonesia') {
-        var subkategoriOptions = ['Jawa Timur', 'Jawa Barat', 'Jawa Tengah', 'Bali'];
-        subkategoriOptions.forEach(function(option) {
-          var optionElement = document.createElement('option');
-          optionElement.textContent = option;
-          subkategoriDropdown.appendChild(optionElement);
-        });
-      } else {
-      }
-    });
-  </script>
+    .text-go {
+      color: #330000;
+    }
+  </style>
+
+
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom/custom.css">
+
+</head>
+
+<body>
+  <div class="position-absolute top-0 left-0">
+    <a href="halaman-resepku.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+  </div>
+  <div class="position-fixed bottom-0 right-0 z-100" style="bottom: 0; right:100px; z-index: 10;">
+    <a href="halaman-upload-resep.php" class="btn btn-go my-5 px-5 d-block text-white rounded-pill">Upload</a>
+  </div>
+
+
+  <div class="background">
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh; ">
+        <div class="col-md-12">
+          <div class="card" style="background-color: #FFC994; border-radius: 70px; ">
+            <div class="card-body">
+              <div class="text-center">
+                <h1>Upload Resep</h1>
+              </div>
+              <div class="row">
+                <div class="col-md-6 px-5">
+                  <label class="bg-white w-100 cursor-pointer m-4" style="border-radius:10px; cursor: pointer;">
+                    <input type="file" class="d-none">
+                    <div class="text-center p-5">
+                      <img src="../assets/images/+.png" alt="" width="100">
+                      <h3 class="pt-5">Tambah Foto</h3>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-md-6 px-5 mt-4">
+                  <div class="mb-3">
+                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                  </div>
+                  <div class="mb-3">
+                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                  </div>
+                  <div class="mb-3">
+                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                  </div>
+                  <div class="mb-3">
+                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
