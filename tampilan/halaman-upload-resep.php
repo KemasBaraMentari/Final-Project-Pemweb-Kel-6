@@ -51,19 +51,20 @@
                       <h3 class="pt-5">Tambah Foto</h3>
                     </div>
                   </label>
+                  <div class="mb-3 m-4 w-100 mt-3">
+                    <textarea name="bahan" id="bahan" rows="4" placeholder="Bahan bahan..." class="form-control rounded p-3" style="height: 200px"></textarea>
+                  </div>
                 </div>
                 <div class="col-md-6 px-5 mt-4">
                   <div class="mb-3">
                     <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
                   </div>
                   <div class="mb-3">
-                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                    <textarea name="deskripsi" id="deskripsi" rows="4" placeholder="Deskripsi..." class="form-control rounded-3 p-3" style="height: 200px"></textarea>
                   </div>
-                  <div class="mb-3">
-                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
-                  </div>
-                  <div class="mb-3">
-                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+
+                  <div class="mb-3 mt-5">
+                    <textarea name="langkah" id="langkah" rows="4" placeholder="Langkah Pembuatan..." class="form-control rounded p-3" style="height: 200px"></textarea>
                   </div>
                 </div>
               </div>
