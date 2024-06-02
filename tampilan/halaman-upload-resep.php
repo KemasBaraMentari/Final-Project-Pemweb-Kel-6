@@ -17,7 +17,6 @@
     }
   </style>
 
-
   <!-- Bootstrap CSS -->
   <link href="../css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
@@ -32,12 +31,11 @@
     <a href="halaman-upload-resep.php" class="btn btn-go my-5 px-5 d-block text-white rounded-pill">Upload</a>
   </div>
 
-
   <div class="background">
     <div class="container">
-      <div class="row justify-content-center align-items-center" style="min-height: 100vh; ">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
         <div class="col-md-12">
-          <div class="card" style="background-color: #FFC994; border-radius: 70px; ">
+          <div class="card" style="background-color: #FFC994; border-radius: 70px;">
             <div class="card-body">
               <div class="text-center">
                 <h1>Upload Resep</h1>
@@ -57,8 +55,19 @@
                 </div>
                 <div class="col-md-6 px-5 mt-4">
                   <div class="mb-3">
-                    <input type="tezt" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
+                    <input type="text" name="nama_masakan" class="form-control rounded-pill p-3" id="nama_masakan" placeholder="Judul Masakan">
                   </div>
+                  
+                  <div class="mb-3">
+                    <select name="kategori" id="kategori" class="form-control rounded-pill p-3">
+                      <option value="">Pilih Kategori</option>
+                      <option value="makanan_western">Makanan Western</option>
+                      <option value="makanan_indonesia">Makanan Indonesia</option>
+                      <option value="makanan_arab">Makanan Arab</option>
+                      <option value="makanan_korea">Makanan Korea</option>
+                    </select>
+                  </div>
+
                   <div class="mb-3">
                     <textarea name="deskripsi" id="deskripsi" rows="4" placeholder="Deskripsi..." class="form-control rounded-3 p-3" style="height: 200px"></textarea>
                   </div>
@@ -77,7 +86,8 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    </div>
+  </div>
 </body>
 
 </html>
