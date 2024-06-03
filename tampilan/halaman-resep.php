@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="../css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/resep.css">
+  <link rel="stylesheet" href="../css/custom/resep.css">
 
   <title>Detail Resep - Aroma Dapur</title>
 </head>
