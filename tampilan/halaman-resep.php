@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/custom/resep.css">
-  <title>Seblak Recipe</title>
+  <title>Resep Seblak</title>
 </head>
 <body>
   <div class="container">
@@ -17,8 +17,7 @@
         <div class="info-column">
           <article class="title-section">
             <h1 class="title">Seblak</h1>
-            <p class="description"> Seblak kini menjadi makanan
-              <a href="https://id.wikipedia.org/wiki/Jajanan_jalanan" class="text-underline" target="_blank" tabindex="0">jajanan jalanan</a> yang digemari berbagai kalangan masyarakat. Seiring berkembangnya tren jajanan tradisional dan kaki lima, seblak
+            <p class="description"> Seblak kini menjadi makanan yang digemari berbagai kalangan masyarakat. Seiring berkembangnya tren jajanan tradisional dan kaki lima, seblak
               tidak hanya disajikan dengan isian aslinya. Seblak berkembang menjadi makanan yang modern dan berhasil menarik perhatian.
             </p>
           </article>
@@ -50,11 +49,11 @@
               <br />
               <ol>
                 <li><span class="step">Rebus kerupuk</span></li>
-                <li><span class="step">tumis bumbu yang sudah dihaluskan</span></li>
-                <li><span class="step">masukkan kerupuk yang sudah lembek</span></li>
-                <li><span class="step">aduk hingga keurpuk dan bumbu tercampur rata</span></li>
-                <li><span class="step">tambahkan sayuran</span></li>
-                <li><span class="step">seblak siap dihidangkan</span></li>
+                <li><span class="step">Tumis bumbu yang sudah dihaluskan</span></li>
+                <li><span class="step">Masukkan kerupuk yang sudah lembek</span></li>
+                <li><span class="step">Aduk hingga keurpuk dan bumbu tercampur rata</span></li>
+                <li><span class="step">Tambahkan sayuran</span></li>
+                <li><span class="step">Seblak siap dihidangkan</span></li>
               </ol>
             </div>
           </div>
