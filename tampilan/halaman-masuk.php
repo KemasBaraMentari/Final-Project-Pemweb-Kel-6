@@ -1,5 +1,5 @@
 <?php
-require_once '../assets/database/koneksi.php';
+require_once '../assets/Database/koneksi.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
