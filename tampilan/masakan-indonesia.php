@@ -10,7 +10,7 @@
   <link href="../css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Daftar resep</title>
+  <title>Daftar Resep Indonesia</title>
 </head>
 
 <body>
