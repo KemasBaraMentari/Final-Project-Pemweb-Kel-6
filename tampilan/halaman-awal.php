@@ -144,7 +144,7 @@ if (isset($_SESSION['user_id'])) {
                 <br><br>
                 <a href="halaman-pengaturan.php" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan</a>
                 <br><br>
-                <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/logout.png" alt="" height="40px">Logout</a>
+                <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/icon_logout.png" alt="" height="40px">Logout</a>
             </div>
         </div>
         <div>
