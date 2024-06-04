@@ -49,7 +49,7 @@ if (isset($_SESSION['user_id'])) {
         <span class="navbar-brand mb-0 h1"><img src="../Logo-AromaDapur.png" alt="" width="50px">AromaDapur</span>
         <?php if ($nama_pengguna != "") : ?>
                     <!-- Jika pengguna sudah login, tampilkan nama pengguna -->
-                    <span class="navbar-brand mb-0 h1"><?php echo "Selamat Datang...$nama_pengguna" ; ?></span>
+                    <span class="navbar-brand mb-0 h1"><?php echo "Selamat Datang! $nama_pengguna" ; ?></span>
                 <?php else : ?>
                     <!-- Jika pengguna belum login, tampilkan tombol atau tautan untuk login -->
                     <span class="navbar-brand mb-0 h1"><a href="halaman-pilihan.php" class="text-decoration-none text-dark"><img src="../assets/images/male_user.png" alt="" width="40px">Akun</a></span>
