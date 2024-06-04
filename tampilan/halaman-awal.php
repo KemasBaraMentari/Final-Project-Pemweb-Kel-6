@@ -71,7 +71,7 @@ if (isset($_SESSION['user_id'])) {
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Western</h3>
                 <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
+                  <a href="masakan-western.php" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ if (isset($_SESSION['user_id'])) {
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Arab</h3>
                 <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
+                  <a href="masakan-arab.php" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ if (isset($_SESSION['user_id'])) {
               <div class="row justify-content-center col-12">
                 <h3 class="text-center">Makanan Korea</h3>
                 <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
+                  <a href="masakan-korea.php" class="btn btn-outline-light rounded-pill px-5 border-4 fw-bold">Lihat</a>
                 </div>
               </div>
             </div>

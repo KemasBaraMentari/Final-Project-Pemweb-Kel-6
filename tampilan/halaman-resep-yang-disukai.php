@@ -31,7 +31,7 @@
                     <img src="../Logo-AromaDapur.png" width="70" alt="">
                   </div>
                   <div class="col-10">
-                    <h1 class="">Daftar Resep</h1>
+                    <h1 class="">Daftar Resep yang Disukai</h1>
                   </div>
                 </div>
               </div>
