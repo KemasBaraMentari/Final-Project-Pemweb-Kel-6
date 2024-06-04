@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="../css/bootstrap.css" rel="stylesheet">
 
-  <title>Aroma Dapur</title>
+  <title>Account</title>
 
   <style>
     .btn-go {
@@ -33,7 +33,7 @@
               <div class="" style="margin-bottom: 100px;">
                 <h1 class="text-go">Aroma Dapur</h1>
                 <h6 class="text-go">Temukan Resep Favoritmu</h6>
-              </div>
+              </div> 
               <div class="d-flex justify-content-center mb-3 align-self-end ">
                 <a href="halaman-masuk.php" class="btn btn-go d-block w-25 text-white rounded-pill">Masuk</a>
               </div>
