@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  
   <div class="position-absolute top-0 left-0">
     <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
   </div>
@@ -35,14 +36,18 @@
                   </div>
                 </div>
               </div>
-              
-                  </div>
-                </div>
+              <div class="mt-5 p-2 display-6">
+                  <a href="halaman-ubah-pass.php" class="text-decoration-none text-dark">Ubah Kata Sandi</a>
+              </div>
+              <div class="mt-5 p-5 display-6">
+                  <a href="halaman-ubah-email.php" class="text-decoration-none text-dark">Ubah Email</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
       <!-- Optional JavaScript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
