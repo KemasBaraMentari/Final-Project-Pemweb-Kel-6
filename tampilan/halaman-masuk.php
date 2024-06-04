@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->num_rows > 0 && password_verify($password, $hashed_password)) {
         $_SESSION['user_id'] = $user_id;
+        $_SESSION['login'] = true;
         header("Location: halaman-awal.php");
         exit();
     } else {

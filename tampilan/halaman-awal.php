@@ -138,11 +138,11 @@ if (isset($_SESSION['user_id'])) {
                 <!-- List pilihan -->
                 <a href="halaman-resepku.php" class="text-decoration-none text-light"><img src="../assets/images/cooking_book.png" alt="" height="40px">Resepku</a>
                 <br><br>
-                <a href="#" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="40px">Resep yang Disukai</a>
+                <a href="halaman-resep-yang-disukai.php" class="text-decoration-none text-light"><img src="../assets/images/love.png" alt="" height="40px">Resep yang Disukai</a>
                 <br><br>
-                <a href="#" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="40px">Resep Trending</a>
+                <a href="halaman-resep-trending.php" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="40px">Resep Trending</a>
                 <br><br>
-                <a href="#" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan</a>
+                <a href="halaman-pengaturan.php" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan</a>
                 <br><br>
                 <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/logout.png" alt="" height="40px">Logout</a>
             </div>
@@ -150,7 +150,7 @@ if (isset($_SESSION['user_id'])) {
         <div>
 
             <!-- Background image kecil bawah -->
-            <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+            <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 150px;">
                 <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" style="background-size: cover; background-position: center; width: 100%;" alt="">
                 </div>
             </div>

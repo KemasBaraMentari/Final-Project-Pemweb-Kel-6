@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/custom/resep.css">
+  <link rel="stylesheet" href="../css/custom/custom.css">
   <title>Resep Seblak</title>
 </head>
 <body>
+  <div class="background">
   <div class="container">
     <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/736a82c833dcf7b37c285e573bd3223e5998769f060e8d25aea2e994f4716c1f?apiKey=7f18a94ec9d94fb8923fe7c1c21a404e&" class="main-image" alt="Main dish image" />
     <section class="content">
@@ -61,5 +63,7 @@
       </section>
     </section>
   </div>
+  </div>
+
 </body>
 </html>
