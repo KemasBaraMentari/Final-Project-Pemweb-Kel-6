@@ -31,7 +31,7 @@
                     <img src="../Logo-AromaDapur.png" width="70" alt="">
                   </div>
                   <div class="col-10">
-                    <h1 class="">Daftar Resep</h1>
+                    <h1 class="">Masakan Western</h1>
                   </div>
                 </div>
               </div>
@@ -48,7 +48,7 @@
                   <div class="col-md-8 text-left ">
                     <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                       <h2>Nasi Goreng</h2>
-                      <h5>Lihat</h5>
+                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
                     </div>
                   </div>
                 </div>
@@ -59,7 +59,7 @@
                   <div class="col-md-8 text-left ">
                     <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                       <h2>Nasi Goreng</h2>
-                      <h5>Lihat</h5>
+                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
                     </div>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
                   <div class="col-md-8 text-left ">
                     <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                       <h2>Nasi Goreng</h2>
-                      <h5>Lihat</h5>
+                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
                     </div>
                   </div>
                 </div>
