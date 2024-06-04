@@ -52,6 +52,11 @@ $result = $conn->query($sql);
                 </div>
               </div>
               <div class="container py-5">
+                <div class="d-flex justify-content-center">
+                  <div class="col-md-4">
+                    <input type="search" name="search" placeholder="Search.." class="search form-control rounded-pill border-0" autocomplete="off">
+                  </div>
+                </div>
                 <?php while($row = $result->fetch_assoc()): ?>
                   <div class="row align-items-center mb-5">
                     <div class="col-md-4">
