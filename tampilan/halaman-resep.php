@@ -48,7 +48,7 @@ $conn->close();
         <section class="content">
             <div class="inner-container">
                 <div class="image-column">
-                  <img loading="lazy" src="../assets/foto-makanan/<?php echo $row['foto_masakan']; ?>" class="main-image" alt="Main dish image" />
+                  <img loading="lazy" src="../assets/foto-makanan/<?php echo $row['foto_masakan']; ?>" class="main-image" alt="Main dish image" style="width: 80%"/>
                 </div>
                 <div class="info-column">
                     <article class="title-section">
