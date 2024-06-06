@@ -1,3 +1,17 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: halaman-pilihan.php");
+    exit();
+}
+
+require_once '../assets/Database/koneksi.php';
+
+// Query untuk mengambil semua masakan dengan kategori 'Korea'
+$sql = "SELECT * FROM recipes WHERE kategori = 'makanan_korea'";
+$result = $conn->query($sql);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -10,7 +24,7 @@
   <link href="../css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Daftar Resep Indonesia</title>
+  <title>Masakan Korea</title>
 </head>
 
 <body>
@@ -18,12 +32,11 @@
     <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
   </div>
 
-
   <div class="background">
     <div class="container">
-      <div class="row justify-content-center align-items-center" style="min-height: 100vh; ">
+      <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
         <div class="col-md-12">
-          <div class="card" style="background-color: #FFC994; border-radius: 70px; ">
+          <div class="card" style="background-color: #FFC994; border-radius: 70px;">
             <div class="card-body text-center">
               <div class="d-flex justify-content-center">
                 <div class="col-md-8 bg-white row align-items-center" style="border-radius: 20px;">
@@ -41,39 +54,28 @@
                 </div>
               </div>
               <div class="container py-5">
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
+                <?php
+                  // Mengecek dan menampilkan hasil query
+                  if ($result->num_rows > 0): 
+                    while($row = $result->fetch_assoc()): ?>
+                      <div class="row align-items-center mb-5">
+                        <div class="col-md-4">
+                          <img src="../assets/foto-makanan/<?php echo $row['foto_masakan']; ?>" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
+                        </div>
+                        <div class="col-md-8 text-left">
+                          <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+                            <h2><?php echo $row['nama_masakan']; ?></h2>
+                            <a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
+                          </div>
+                        </div>
+                      </div>
+                    <?php endwhile; 
+                  else: ?>
+                    <p>Tidak ada resep masakan Korea yang ditemukan.</p>
+                  <?php endif; 
+                  // Menutup koneksi
+                  $conn->close();
+                ?>
               </div>
             </div>
           </div>

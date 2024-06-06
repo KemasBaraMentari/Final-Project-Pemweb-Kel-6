@@ -7,9 +7,8 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once '../assets/Database/koneksi.php';
 
-// Ambil data resep dari database sesuai user_id
-$user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM recipes WHERE user_id = $user_id";
+// Query untuk mengambil semua masakan dengan kategori 'Korea'
+$sql = "SELECT * FROM recipes WHERE kategori = 'makanan_indonesia'";
 $result = $conn->query($sql);
 ?>
 
@@ -25,7 +24,7 @@ $result = $conn->query($sql);
   <link href="../css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Daftar Resep Indonesia</title>
+  <title>Masakan Indonesia</title>
 </head>
 
 <body>
@@ -56,7 +55,7 @@ $result = $conn->query($sql);
                 </div>
               </div>
               <div class="container py-5">
-              <?php while($row = $result->fetch_assoc()): ?>
+                <?php while($row = $result->fetch_assoc()): ?>
                   <div class="row align-items-center mb-5">
                     <div class="col-md-4">
                       <img src="../assets/foto-makanan/<?php echo $row['foto_masakan']; ?>" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
