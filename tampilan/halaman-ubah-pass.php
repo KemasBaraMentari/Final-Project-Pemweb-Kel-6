@@ -31,22 +31,19 @@
                     <div class="card p-4" style="background-color: #FFC994; border-radius: 100px; height: 80vh;">
                         <div class="card-body ">
                             <div class="mb-5">
-                                <h1 class="text-go text-center">Masukkan Akun</h1>
+                                <h1 class="text-go text-center">Ubah Kata Sandi</h1>
                             </div>
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control rounded-pill" id="email" placeholder="name@example.com">
+                                <label for="password" class="form-label">Kata Sandi Baru</label>
+                                    <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan kata sandi lama">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="password" class="form-label">Kata Sandi</label>
-                                    <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan kata sandi">
+                                    <label for="password" class="form-label">Kata Sandi Baru</label>
+                                    <input type="password" name="password" class="form-control rounded-pill" id="password" placeholder="masukkan kata sandi baru">
                                 </div>
                                 <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
-                                    <a href="oke.php" class=" d-block text-go text-decoration">Lupa Password?</a>
-                                </div>
-                                <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
-                                    <button type="submit" class="btn btn-go d-block w-50 text-white rounded-pill">Masuk</button>
+                                    <button type="submit" class="btn btn-go d-block w-50 text-white rounded-pill">Ubah</button>
                                 </div>
                             </form>
                         </div>

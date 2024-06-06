@@ -142,7 +142,7 @@ if (isset($_SESSION['user_id'])) {
                 <br><br>
                 <a href="halaman-resep-trending.php" class="text-decoration-none text-light"><img src="../assets/images/ratings.png" alt="" height="40px">Resep Trending</a>
                 <br><br>
-                <a href="halaman-pengaturan.php" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan AKun</a>
+                <a href="halaman-pengaturan.php" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan Akun</a>
                 <br><br>
                 <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/icon_logout.png" alt="" height="40px">Logout</a>
             </div>
