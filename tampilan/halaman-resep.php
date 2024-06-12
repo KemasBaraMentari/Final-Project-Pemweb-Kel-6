@@ -44,6 +44,11 @@ $conn->close();
 </head>
 
 <body>
+    <div class="position-absolute top-0 left-0">
+    <a href="halaman-resepku.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+    </div>
+
+    <div class="background">
     <div class="container">
         <section class="content">
             <div class="inner-container">
@@ -92,6 +97,7 @@ $conn->close();
                 </div>
             </section>
         </section>
+    </div>
     </div>
 </body>
 

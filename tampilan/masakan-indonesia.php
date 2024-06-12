@@ -68,44 +68,7 @@ $result = $conn->query($sql);
                     </div>
                   </div>
                 <?php endwhile; ?>
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                  <div class="col-md-4">
-                    <img src="../assets/images/rectangle_108.jpeg" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                  </div>
-                  <div class="col-md-8 text-left ">
-                    <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                      <h2>Nasi Goreng</h2>
-                      <a href="#" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                
 
       <!-- Optional JavaScript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

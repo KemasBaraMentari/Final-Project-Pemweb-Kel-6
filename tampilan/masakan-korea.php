@@ -71,7 +71,7 @@ $result = $conn->query($sql);
                       </div>
                     <?php endwhile; 
                   else: ?>
-                    <p>Tidak ada resep masakan Korea yang ditemukan.</p>
+                    
                   <?php endif; 
                   // Menutup koneksi
                   $conn->close();
