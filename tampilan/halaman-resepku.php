@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 <!doctype html>
 <html lang="en">
 
-<head>a
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -66,6 +66,10 @@ $result = $conn->query($sql);
                       <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                         <h2><?php echo $row['nama_masakan']; ?></h2>
                         <h5><a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>">Lihat</a></h5>
+                        <form action="hapus-resep.php" method="POST" class="mt-3">
+                          <input type="hidden" name="recipe_id" value="<?php echo $row['recipe_id']; ?>">
+                          <button type="submit" class="btn btn-danger">Hapus</button>
+                        </form>
                       </div>
                     </div>
                   </div>

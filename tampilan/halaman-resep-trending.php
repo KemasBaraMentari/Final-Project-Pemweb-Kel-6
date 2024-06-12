@@ -1,22 +1,23 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: halaman-pilihan.php");
-    exit();
-}
-
 require_once '../assets/Database/koneksi.php';
 
-// Ambil data resep dari database sesuai user_id
-$user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM recipes WHERE user_id = $user_id";
+// Get the recipe ID from the URL
+$recipe_id = $_GET['id'];
+
+// Update the access count
+$sql = "UPDATE recipes SET access_count = access_count + 1 WHERE recipe_id = $recipe_id";
+$conn->query($sql);
+
+// Fetch the recipe details
+$sql = "SELECT * FROM recipes WHERE recipe_id = $recipe_id";
 $result = $conn->query($sql);
+$recipe = $result->fetch_assoc();
 ?>
 
 <!doctype html>
 <html lang="en">
 
-<head>a
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +25,7 @@ $result = $conn->query($sql);
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Resep Trending</title>
+  <title>Detail Resep</title>
 </head>
 
 <body>
@@ -44,26 +45,18 @@ $result = $conn->query($sql);
                     <img src="../Logo-AromaDapur.png" width="70" alt="">
                   </div>
                   <div class="col-10">
-                    <h1 class="">Resep Trending</h1>
+                    <h1 class="">Detail Resep</h1>
                   </div>
                 </div>
               </div>
               <div class="container py-5">
                 <div class="d-flex justify-content-center">
+                  <!-- Display recipe details here -->
+                  <h2><?php echo $recipe['nama_masakan']; ?></h2>
+                  <img src="../assets/foto-makanan/<?php echo $recipe['foto_masakan']; ?>" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
+                  <p><?php echo $recipe['deskripsi_masakan']; ?></p>
+                  <!-- Add other details as needed -->
                 </div>
-                <?php while($row = $result->fetch_assoc()): ?>
-                  <div class="row align-items-center mb-5">
-                    <div class="col-md-4">
-                      <img src="../assets/foto-makanan/<?php echo $row['foto_masakan']; ?>" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                    </div>
-                    <div class="col-md-8 text-left">
-                      <div class="d-flex flex-column justify-content-between" style="height: 100%;">
-                        <h2><?php echo $row['nama_masakan']; ?></h2>
-                        <h5><a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>">Lihat</a></h5>
-                      </div>
-                    </div>
-                  </div>
-                <?php endwhile; ?>
               </div>
             </div>
           </div>
