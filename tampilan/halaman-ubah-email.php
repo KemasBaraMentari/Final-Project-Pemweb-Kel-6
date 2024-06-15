@@ -1,3 +1,68 @@
+<?php
+session_start();
+
+// Periksa apakah pengguna sudah login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: halaman-pilihan.php");
+    exit();
+}
+
+// Include koneksi ke database
+require_once '../assets/Database/koneksi.php';
+
+// Inisialisasi variabel pesan kesalahan
+$pesan_error = '';
+
+// Proses saat form dikirim
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari form
+    $email_lama = mysqli_real_escape_string($conn, $_POST['email_lama']);
+    $email_baru = mysqli_real_escape_string($conn, $_POST['email_baru']);
+
+    // Ambil user_id dari session
+    $user_id = $_SESSION['user_id'];
+
+    // Query untuk mengambil email lama dari database
+    $query = "SELECT email FROM users WHERE user_id = $user_id";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $email_database = $row['email'];
+
+        // Verifikasi email lama
+        if ($email_lama === $email_database) {
+            // Update email baru di database
+            $update_query = "UPDATE users SET email = '$email_baru' WHERE user_id = $user_id";
+
+            if ($conn->query($update_query) === TRUE) {
+                // Redirect ke halaman sukses atau halaman sebelumnya
+                header("Location: halaman-pengaturan.php");
+                exit();
+            } else {
+                $pesan_error = "Gagal mengubah email. Silakan coba lagi.";
+            }
+        } else {
+            $pesan_error = "Email lama yang Anda masukkan salah.";
+        }
+    } else {
+        $pesan_error = "User tidak ditemukan.";
+    }
+
+    // Tutup koneksi
+    $conn->close();
+}
+
+// Jika ada pesan kesalahan, akan redirect kembali ke halaman sebelumnya dengan pesan kesalahan
+if (!empty($pesan_error)) {
+    $_SESSION['pesan_error'] = $pesan_error;
+    header("Location: " . $_SERVER['HTTP_REFERER']);
+    exit();
+}
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +74,7 @@
     <!-- Bootstrap CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
 
-    <title>Masuk | Aroma Dapur</title>
+    <title>Ubah Email | Aroma Dapur</title>
 
     <style>
         .btn-go {
@@ -35,12 +100,12 @@
                             </div>
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                                 <div class="mb-3">
-                                    <label for="email" class="form-label"> Masukkan Email Lama</label>
-                                    <input type="email" name="email" class="form-control rounded-pill" id="email" placeholder="name@example.com">
+                                    <label for="email_lama" class="form-label">Masukkan Email Lama</label>
+                                    <input type="email" name="email_lama" class="form-control rounded-pill" id="email_lama" placeholder="Email lama" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label"> Masukkan Email Baru</label>
-                                    <input type="email" name="email" class="form-control rounded-pill" id="email" placeholder="name@example.com">
+                                    <label for="email_baru" class="form-label">Masukkan Email Baru</label>
+                                    <input type="email" name="email_baru" class="form-control rounded-pill" id="email_baru" placeholder="Email baru" required>
                                 </div>
                                 <div class="d-flex justify-content-center mb-3 align-self-end mt-5">
                                     <button type="submit" class="btn btn-go d-block w-50 text-white rounded-pill">Ubah</button>
@@ -53,20 +118,13 @@
         </div>
 
         <div class="position-absolute top-0 left-0">
-            <a href="halaman-pilihan.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
+            <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
         </div>
 
-        <!-- Optional JavaScript; choose one of the two! -->
-
-        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <!-- Bootstrap JS -->
         <script src="../js/bootstrap.js"></script>
         <script src="../js/popper.min.js"></script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        -->
 </body>
 
 </html>
