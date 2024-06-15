@@ -95,23 +95,6 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Custom JavaScript -->
     <script>
       $(document).ready(function() {
-        $('#uploadForm').submit(function(event) {
-          event.preventDefault(); // Prevent form submission
-          var formData = new FormData(this); // Create FormData object from form
-          
-          $.ajax({
-            url: $(this).attr('action'), // Form action URL
-            type: $(this).attr('method'), // Form submit method (POST)
-            data: formData, // Form data
-            processData: false,
-            contentType: false,
-            success: function(data) {
-              // Reload page to show uploaded image
-              location.reload();
-            }
-          });
-        });
-
         // Preview selected image
         $('#foto_masakan').change(function() {
           readURL(this);
