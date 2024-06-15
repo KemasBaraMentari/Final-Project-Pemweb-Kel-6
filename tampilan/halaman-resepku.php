@@ -66,6 +66,14 @@ $result = $conn->query($sql);
                       <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                         <h2><?php echo $row['nama_masakan']; ?></h2>
                         <h5><a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>">Lihat</a></h5>
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                          <form action="../assets/Database/proses-like.php" method="post">
+                            <input type="hidden" name="recipe_id" value="<?php echo $row['recipe_id']; ?>">
+                            <button type="submit" class="btn btn-primary">Like</button>
+                          </form>
+                        <?php else: ?>
+                          <a href="halaman-pilihan.php" class="btn btn-primary">Like</a>
+                        <?php endif; ?>
                         <form action="hapus-resep.php" method="POST" class="mt-3">
                           <input type="hidden" name="recipe_id" value="<?php echo $row['recipe_id']; ?>">
                           <button type="submit" class="btn btn-danger">Hapus</button>
