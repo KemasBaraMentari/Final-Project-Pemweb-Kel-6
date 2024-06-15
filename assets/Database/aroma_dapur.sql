@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jun 2024 pada 08.52
+-- Waktu pembuatan: 15 Jun 2024 pada 16.10
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -16,6 +16,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+-- Buat database jika belum ada
+CREATE DATABASE IF NOT EXISTS `aroma_dapur` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+-- Pilih database
+USE `aroma_dapur`;
 
 --
 -- Database: `aroma_dapur`
@@ -35,7 +41,8 @@ CREATE TABLE `recipes` (
   `kategori` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `bahan` text NOT NULL,
-  `langkah` text NOT NULL
+  `langkah` text NOT NULL,
+  `access_count` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -84,7 +91,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `recipes`
 --
 ALTER TABLE `recipes`
-  MODIFY `recipe_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `recipe_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
