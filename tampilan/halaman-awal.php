@@ -58,12 +58,6 @@ if (isset($_SESSION['user_id'])) {
     </nav>
 
     <div class="container py-3">
-      <div class="d-flex justify-content-center">
-        <div class="col-md-4">
-          <input type="search" name="search" placeholder="Search.." class="search form-control rounded-pill border-0" autocomplete="off">
-        </div>
-      </div>
-
       <div class="row py-5">
         <div class="col-md-6 p-5">
           <div class="card text-white" style="background-image: url('../assets/images/rectangle_105.jpeg'); height: 300px; background-size: cover; border-radius: 50px;">
@@ -116,11 +110,8 @@ if (isset($_SESSION['user_id'])) {
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
-
 
     <!-- off canvas sidebar -->
     <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color: #531607">
@@ -144,31 +135,27 @@ if (isset($_SESSION['user_id'])) {
                 <br><br>
                 <a href="halaman-pengaturan.php" class="text-decoration-none text-light"><img src="../assets/images/settings.png" alt="" height="40px">Pengaturan Akun</a>
                 <br><br>
-                <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/icon_logout.png" alt="" height="40px">Logout</a>
+                <?php if ($nama_pengguna != "") : ?>
+                    <!-- Jika pengguna sudah login, tampilkan tombol Logout -->
+                    <a href="../assets/Database/logout.php" class="text-decoration-none text-light"><img src="../assets/images/icon_logout.png" alt="" height="40px">Logout</a>
+                <?php endif; ?>
             </div>
         </div>
-        <div>
 
-            <!-- Background image kecil bawah -->
-            <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 150px;">
-                <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" style="background-size: cover; background-position: center; width: 100%;" alt="">
-                </div>
+        <!-- Background image kecil bawah -->
+        <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 150px;">
+            <div class="mt-auto p-2 bd-highlight"><img src="../assets/images/dudel_masak_oren_2.png" style="background-size: cover; background-position: center; width: 100%;" alt="">
             </div>
-            <!-- end off canvas sidebar -->
+        </div>
+        <!-- end off canvas sidebar -->
 
+        <!-- Optional JavaScript; choose one of the two! -->
 
-            <!-- Optional JavaScript; choose one of the two! -->
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/popper.min.js"></script>
 
-            <!-- Option 1: Bootstrap Bundle with Popper -->
-            <script src="../js/bootstrap.js"></script>
-            <script src="../js/popper.min.js"></script>
-
-            <!-- Option 2: Separate Popper and Bootstrap JS -->
-            <!--
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        -->
-    </div>
-</body>
-
-</html>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src
