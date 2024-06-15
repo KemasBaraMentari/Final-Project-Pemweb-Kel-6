@@ -1,9 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: halaman-pilihan.php");
-    exit();
-}
 
 require_once '../assets/Database/koneksi.php';
 
@@ -67,14 +62,34 @@ $result = $conn->query($sql);
                           <div class="d-flex flex-column justify-content-between" style="height: 100%;">
                             <h2><?php echo $row['nama_masakan']; ?></h2>
                             <a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>" class="text-decoration-none text-dark"><h5>Lihat</h5></a>
-                            <?php if (isset($_SESSION['user_id'])): ?>
-                              <form action="../assets/Database/proses-like.php" method="post">
-                                <input type="hidden" name="recipe_id" value="<?php echo $row['recipe_id']; ?>">
-                                <button type="submit" class="btn btn-primary">Like</button>
-                              </form>
-                            <?php else: ?>
-                              <a href="halaman-pilihan.php" class="btn btn-primary">Like</a>
-                            <?php endif; ?>
+                            <?php
+                              // Memeriksa apakah pengguna sudah login
+                              if (isset($_SESSION['user_id'])) {
+                                  // Query untuk memeriksa apakah resep ini sudah disukai oleh pengguna
+                                  $check_like_sql = "SELECT * FROM liked_recipes WHERE user_id = ? AND recipe_id = ?";
+                                  $stmt_check_like = $conn->prepare($check_like_sql);
+                                  $stmt_check_like->bind_param("ii", $_SESSION['user_id'], $row['recipe_id']);
+                                  $stmt_check_like->execute();
+                                  $result_like = $stmt_check_like->get_result();
+
+                                  if ($result_like->num_rows > 0) {
+                                      // Jika sudah disukai, tampilkan tombol Dislike
+                                      echo '<form action="../assets/Database/proses-like.php" method="post">
+                                              <input type="hidden" name="recipe_id" value="' . $row['recipe_id'] . '">
+                                              <button type="submit" class="btn btn-danger">Dislike</button>
+                                            </form>';
+                                  } else {
+                                      // Jika belum disukai, tampilkan tombol Like
+                                      echo '<form action="../assets/Database/proses-like.php" method="post">
+                                              <input type="hidden" name="recipe_id" value="' . $row['recipe_id'] . '">
+                                              <button type="submit" class="btn btn-primary">Like</button>
+                                            </form>';
+                                  }
+                              } else {
+                                  // Jika pengguna belum login, arahkan ke halaman login
+                                  echo '<a href="halaman-pilihan.php" class="btn btn-primary">Login untuk Like</a>';
+                              }
+                              ?>
                           </div>
                         </div>
                       </div>
