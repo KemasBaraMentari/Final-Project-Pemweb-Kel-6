@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+// Memeriksa apakah pengguna sudah login
 if (!isset($_SESSION['user_id'])) {
     header("Location: halaman-pilihan.php");
     exit();
@@ -7,16 +9,16 @@ if (!isset($_SESSION['user_id'])) {
 
 require_once '../assets/Database/koneksi.php';
 
-// Ambil data resep dari database sesuai user_id
+// Ambil data resep yang disukai oleh pengguna dari tabel liked_recipes
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT * FROM recipes WHERE user_id = $user_id";
+$sql = "SELECT r.* FROM recipes r INNER JOIN liked_recipes lr ON r.recipe_id = lr.recipe_id WHERE lr.user_id = $user_id";
 $result = $conn->query($sql);
 ?>
 
 <!doctype html>
 <html lang="en">
 
-<head>a
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +26,7 @@ $result = $conn->query($sql);
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Resepku</title>
+  <title>Resep yang Disukai</title>
 </head>
 
 <body>
