@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: halaman-masuk.php");
+    header("Location: halaman-pilihan.php");
     exit();
 }
 ?>
@@ -42,14 +42,14 @@ if (!isset($_SESSION['user_id'])) {
               <div class="text-center">
                 <h1>Upload Resep</h1>
               </div>
-              <form action="../assets/Database/proses-upload-resep.php" method="POST" enctype="multipart/form-data">
+              <form id="uploadForm" action="../assets/Database/proses-upload-resep.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-md-6 px-5">
-                    <label class="bg-white w-100 cursor-pointer m-4" style="border-radius:10px; cursor: pointer;">
-                      <input type="file" name="foto_masakan" class="d-none" required>
+                    <label id="fotoLabel" class="bg-white w-100 cursor-pointer m-4" style="border-radius:10px; cursor: pointer;">
+                      <input type="file" name="foto_masakan" id="foto_masakan" class="d-none" required>
                       <div class="text-center p-5">
-                        <img src="../assets/images/+.png" alt="" width="100">
-                        <h3 class="pt-5">Tambah Foto</h3>
+                        <img id="previewFoto" src="../assets/images/+.png" alt="" width="100">
+                        <h3 id="fotoText" class="pt-5">Tambah Foto</h3>
                       </div>
                     </label>
                     <div class="mb-3 m-4 w-100 mt-3">
@@ -91,6 +91,46 @@ if (!isset($_SESSION['user_id'])) {
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      $(document).ready(function() {
+        $('#uploadForm').submit(function(event) {
+          event.preventDefault(); // Prevent form submission
+          var formData = new FormData(this); // Create FormData object from form
+          
+          $.ajax({
+            url: $(this).attr('action'), // Form action URL
+            type: $(this).attr('method'), // Form submit method (POST)
+            data: formData, // Form data
+            processData: false,
+            contentType: false,
+            success: function(data) {
+              // Reload page to show uploaded image
+              location.reload();
+            }
+          });
+        });
+
+        // Preview selected image
+        $('#foto_masakan').change(function() {
+          readURL(this);
+          $('#fotoText').text('Ubah Foto'); // Change text to "Ubah Foto"
+        });
+
+        function readURL(input) {
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+              $('#previewFoto').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+          }
+        }
+      });
+    </script>
   </div>
 </body>
 
