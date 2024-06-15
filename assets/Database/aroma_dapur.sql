@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Jun 2024 pada 16.10
+-- Waktu pembuatan: 15 Jun 2024 pada 16.59
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -30,10 +30,23 @@ USE `aroma_dapur`;
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `liked_recipes`
+--
+
+CREATE TABLE IF NOT EXISTS `liked_recipes` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `recipe_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `recipes`
 --
 
-CREATE TABLE `recipes` (
+CREATE TABLE IF NOT EXISTS `recipes` (
   `recipe_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `nama_masakan` varchar(100) NOT NULL,
@@ -51,7 +64,7 @@ CREATE TABLE `recipes` (
 -- Struktur dari tabel `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -68,6 +81,14 @@ INSERT INTO `users` (`user_id`, `nama`, `email`, `password`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `liked_recipes`
+--
+ALTER TABLE `liked_recipes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `recipe_id` (`recipe_id`);
 
 --
 -- Indeks untuk tabel `recipes`
@@ -88,6 +109,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `liked_recipes`
+--
+ALTER TABLE `liked_recipes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `recipes`
 --
 ALTER TABLE `recipes`
@@ -102,6 +129,13 @@ ALTER TABLE `users`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `liked_recipes`
+--
+ALTER TABLE `liked_recipes`
+  ADD CONSTRAINT `liked_recipes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  ADD CONSTRAINT `liked_recipes_ibfk_2` FOREIGN KEY (`recipe_id`) REFERENCES `recipes` (`recipe_id`);
 
 --
 -- Ketidakleluasaan untuk tabel `recipes`
