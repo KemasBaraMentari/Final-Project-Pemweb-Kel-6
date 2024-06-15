@@ -1,49 +1,33 @@
 <?php
 require_once '../assets/Database/koneksi.php';
 
-// Get the recipe ID from the URL
-$recipe_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+// Ambil semua resep berdasarkan jumlah access_count tertinggi
+$select_sql = "SELECT * FROM recipes ORDER BY access_count DESC";
+$result = $conn->query($select_sql);
 
-if ($recipe_id > 0) {
-    // Update the access count
-    $update_sql = "UPDATE recipes SET access_count = access_count + 1 WHERE recipe_id = ?";
-    $stmt = $conn->prepare($update_sql);
-    $stmt->bind_param("i", $recipe_id);
-    $stmt->execute();
-    $stmt->close();
-
-    // Fetch the recipe details
-    $select_sql = "SELECT * FROM recipes WHERE recipe_id = ?";
-    $stmt = $conn->prepare($select_sql);
-    $stmt->bind_param("i", $recipe_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $recipe = $result->fetch_assoc();
-    $stmt->close();
-} else {
-    die("Invalid recipe ID.");
-}
+// Variabel untuk menentukan urutan
+$ranking = 1;
 ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/custom/custom.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/custom/custom.css">
 
-  <title>Detail Resep</title>
+    <title>Resep Trending</title>
 </head>
 
 <body>
     <div class="position-absolute top-0 left-0">
         <a href="halaman-awal.php"><img src="../assets/images/sort_left.png" alt="tombol back"></a>
     </div>
-    
+
     <div class="background">
         <div class="container">
             <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
@@ -56,22 +40,34 @@ if ($recipe_id > 0) {
                                         <img src="../Logo-AromaDapur.png" width="70" alt="">
                                     </div>
                                     <div class="col-10">
-                                        <h1 class="">Detail Resep</h1>
+                                        <h1 class="">Resep Trending</h1>
                                     </div>
                                 </div>
                             </div>
                             <div class="container py-5">
                                 <div class="d-flex justify-content-center">
-                                    <!-- Display recipe details here -->
-                                    <?php if ($recipe): ?>
-                                        <div>
-                                            <h2><?php echo htmlspecialchars($recipe['nama_masakan']); ?></h2>
-                                            <img src="../assets/foto-makanan/<?php echo htmlspecialchars($recipe['foto_masakan']); ?>" alt="gambar produk" style="object-fit: contain;" class="rounded-lg w-100">
-                                            <p><?php echo nl2br(htmlspecialchars($recipe['deskripsi_masakan'])); ?></p>
-                                            <!-- Add other details as needed -->
+                                    <!-- Display trending recipes here -->
+                                    <?php if ($result->num_rows > 0): ?>
+                                        <div class="row">
+                                            <?php while ($row = $result->fetch_assoc()): ?>
+                                                <div class="col-md-4 mb-4">
+                                                    <div class="card">
+                                                        <img src="../assets/foto-makanan/<?php echo htmlspecialchars($row['foto_masakan']); ?>" class="card-img-top" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title"><?php echo htmlspecialchars($row['nama_masakan']); ?></h5>
+                                                            <p class="card-text"><?php echo substr(htmlspecialchars($row['deskripsi']), 0, 100); ?>...</p>
+                                                            <a href="halaman-resep.php?id=<?php echo $row['recipe_id']; ?>" class="btn btn-primary">Lihat Detail</a>
+                                                            <p class="mt-2">Ranking: <?php echo $ranking; ?></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                                $ranking++; // Increment ranking setiap kali menampilkan resep
+                                                ?>
+                                            <?php endwhile; ?>
                                         </div>
                                     <?php else: ?>
-                                        <p>Resep tidak ditemukan.</p>
+                                        <p>Tidak ada resep yang ditemukan.</p>
                                     <?php endif; ?>
                                 </div>
                             </div>
