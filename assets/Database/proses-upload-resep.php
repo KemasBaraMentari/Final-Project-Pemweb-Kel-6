@@ -57,17 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // File berhasil diupload, simpan data ke database
             $foto_masakan = basename($_FILES["foto_masakan"]["name"]);
 
-            // Query untuk menyimpan data ke database
+            // Prepared statement untuk menyimpan data ke database
             $sql = "INSERT INTO recipes (user_id, nama_masakan, foto_masakan, kategori, deskripsi, bahan, langkah) 
-                    VALUES ('$user_id', '$nama_masakan', '$foto_masakan', '$kategori', '$deskripsi', '$bahan', '$langkah')";
+                    VALUES (?, ?, ?, ?, ?, ?, ?)";
+            
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("issssss", $user_id, $nama_masakan, $foto_masakan, $kategori, $deskripsi, $bahan, $langkah);
 
-            if ($conn->query($sql) === TRUE) {
+            if ($stmt->execute()) {
                 // Redirect pengguna ke halaman resep setelah upload berhasil
                 header("Location: ../../tampilan/halaman-resepku.php");
                 exit();
             } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                echo "Error: " . $stmt->error;
             }
+            $stmt->close();
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
