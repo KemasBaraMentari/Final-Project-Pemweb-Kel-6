@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: halaman-pilihan.php");
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 
