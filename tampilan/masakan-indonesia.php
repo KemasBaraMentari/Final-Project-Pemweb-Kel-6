@@ -64,7 +64,6 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
                                 <div class="col-md-4">
                                     <form action="" method="GET" class="form-inline">
                                         <input type="search" id="searchInput" name="search" placeholder="Search.." class="search form-control rounded-pill border-0 bg-white" autocomplete="off" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-                                        <button type="submit" class="btn btn-primary ml-2">Search</button>
                                     </form>
                                 </div>
                             </div>
