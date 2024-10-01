@@ -1,30 +1,12 @@
-# Bike Sharing Dashboard
+# Final-Project-Pemweb-Kel-6
+github untuk final project mata kuliah pemrograman web kelompok 6  
+Website resep makanan dengan nama "Aroma Dapur"  
 
-### Setup Environment - Shell/Terminal
-```
-cd Submission
-pip install openpyxl
-pip install -r requirements.txt
-```
+Anggota:
+1. Kemas Alfin Yazi Bara Mentari (22081010143)  
+2. Fatan Izzatur Rahman (22081010145)  
+3. Galang Rizqian Falah (22081010148)  
+4. Bryan Anantha Manggala (22081010164)  
+5. Naufaldy Akbar Endhardin (22081010167)   
 
-## Menjalankan Aplikasi
 
-```bash
-streamlit run dashboard/bike_sharing_dashboard.py
-```
-## Struktur folder
-```
-Submission/
-│
-├── data/
-│   ├── hour.xlsx
-│   └── day.xlsx
-│
-└── dashboard/
-    └── bike_sharing_dashboard.py
-```
-
-## Cara Menggunakan
-1. Pilih tanggal menggunakan kalender di sidebar.
-2. Setelah memilih tanggal, grafik jumlah penyewaan sepeda per jam untuk tanggal tersebut akan ditampilkan di bagian utama.
-3. Anda juga dapat melihat statistik harian dari dataset.
